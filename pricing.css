@@ -1,0 +1,722 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root{
+    font-family: 'Kanit', sans-serif;
+    font-family: 'Oswald', sans-serif;
+    font-size: 16px;
+
+    --lb-color: rgb(70, 204, 222);
+    --blue-color: rgb(29, 27, 103);
+    --llb-color: rgb(205, 249, 255);
+    --green-color: rgb(0, 86, 97);
+
+    scroll-behavior: smooth;
+}
+body{overflow-x: hidden;}
+header{
+    height: 100px;
+    width: 100vw;
+    position: relative;
+    top: 0;
+    left: 0;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 150px;
+}
+header .logo{
+    padding: 20px 30px;
+}
+header input, header label{
+    display: none;
+}
+header .nav-links{
+    display: flex;
+    flex-direction: row;
+}
+header .nav-links a{
+    margin-left: 35px;
+    color: #000;
+    text-decoration: none;
+}
+header .nav-links a:hover{color: #666;}
+#start-scheduling{
+    color: #fff;
+    text-decoration: none;
+    padding: 12px 30px;
+    background: var(--blue-color);
+    border-radius: 5px;
+    transition: .3s;
+}
+#start-scheduling:hover{background: rgb(50, 46, 161);}
+
+
+.title{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+}
+.title h1{
+    font-size: 3rem;
+    font-family: sans-serif;
+}
+.title p{
+    font-family: 'Kanit', sans-serif;
+    color: #777;
+    width: 39vw;
+    margin: 15px 0;
+}
+
+/* Billed monthly yearly */
+
+
+.title div{
+    display: flex;
+}
+.title div span{
+    margin: 0 10px;
+}
+.title div #year{
+    color: #777;
+}
+
+.toggler-wrapper input[type="checkbox"] {
+  display: none;
+}
+  
+.toggler-wrapper input[type="checkbox"]:checked+.toggler-slider {
+  background-color: rgb(58, 132, 247);
+}
+  
+.toggler-wrapper .toggler-slider {
+  background-color: #ccc;
+  position: relative;
+  border-radius: 100px;
+  top: 0;
+  left: 0;
+  width: 50px;
+  height: 25px;
+  -webkit-transition: all 300ms ease;
+  transition: all 300ms ease;
+}
+  
+.toggler-wrapper .toggler-knob {
+  position: absolute;
+  -webkit-transition: all 300ms ease;
+  transition: all 300ms ease;
+}
+
+.toggler-wrapper.style-1 input[type="checkbox"]:checked+.toggler-slider .toggler-knob {
+  right: calc(100% - 19px - 3px);
+}
+
+.toggler-wrapper.style-1 .toggler-knob {
+  width: calc(25px - 6px);
+  height: calc(25px - 6px);
+  border-radius: 50%;
+  right: 3px;
+  top: 2.5px;
+  background-color: #fff;
+}
+
+
+/*  */
+
+
+
+
+li{list-style-type:none;}
+
+.plans{
+    width: 100vw;
+    height: 70vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+.plan{
+    margin: 0 35px;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+    padding: 30px;
+    width: 20vw;
+}
+.plan h1{
+    font-family: 'Kanit', sans-serif;
+    font-size: 2rem;
+}
+.plan p{
+    font-weight: 300;
+    padding: 1rem 0;
+    border-bottom: 2px solid #ccc;
+    font-size: 1rem;
+    font-family: sans-serif;
+    color: #666;
+    margin-bottom: 15px;
+}
+.plan ul li{
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    font-weight: 300;
+    font-family: sans-serif;
+}
+.plan li img{
+    margin-right: 10px;
+    width: 20px;
+}
+.plan ul{
+    margin:40px 0;
+}
+.plan a{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    background: var(--blue-color);
+    padding: 12px 30px;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: .3s;
+}
+.plan a:hover{
+    background: rgb(72, 67, 197);
+}
+
+
+
+
+
+
+
+footer{
+    width: 100vw;
+    height: 40vh;
+    padding: 10vh 0;
+    display: flex;
+}
+footer .footer-table{
+    width: 50vw;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 0 0 0 150px;
+}
+footer .footer-table img{
+    width: 24px;
+}
+footer .footer-table tr:nth-child(1){
+    font-weight: 600;
+}
+.footer-table td{
+    width: 10vw;
+}
+.footer-table td a{
+    text-decoration: none;
+    color: #555;
+    font-weight: 300;
+    transition: color .3s;
+}
+.footer-table td a:hover{color: #000}
+footer .footer-form{
+    width: 50vw;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 0 0 0 150px;
+}
+.footer-form div{margin-bottom: 5px;}
+.footer-form .email{
+    border: 1px solid #000;
+    padding: 5px;
+}
+.footer-form .email input{
+    padding: 15px;
+    border: none;
+    outline: none;
+}
+.footer-form .email button{
+    padding: 16px;
+    font-weight: 600;
+    border: none;
+    background: var(--blue-color);
+    border-radius: 5px;
+    transition: .3s;
+    color: #fff;
+    cursor: pointer;
+}
+.footer-form .email button:hover{
+    background: rgb(72, 67, 197);
+}
+
+
+
+
+
+
+
+
+@media (max-width: 960px){
+    header{
+        height: 100px;
+        width: 100vw;
+        position: relative;
+        top: 0;
+        left: 0;
+    
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 50px;
+    }
+
+    
+.title{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    padding-top: 10vh;
+}
+.title h1{
+    font-size: 3rem;
+    width: 70vw;
+    font-family: sans-serif;
+}
+.title p{
+    font-family: 'Kanit', sans-serif;
+    color: #777;
+    width: 80vw;
+    margin: 15px 0;
+}
+
+
+
+
+.plans{
+    width: 100vw;
+    height: 100%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 15px;
+    margin: 10vh 0;
+    padding: 0 30px;
+}
+
+.plans .plan.seven { grid-area: 1 / 1 / 2 / 2; }
+.plans .plan.twelve { grid-area: 1 / 2 / 2 / 3; }
+.plans .plan.four { grid-area: 2 / 1 / 3 / 3; }
+
+.plan{
+    margin: 0 35px;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+    padding: 30px 30px 90px 30px;
+    width: 100%;
+    height: 100%;
+    position: relative;
+    margin: 0 auto;
+}
+.plan h1{
+    font-family: 'Kanit', sans-serif;
+    font-size: 2rem;
+}
+.plan p{
+    font-weight: 300;
+    padding: 1rem 0;
+    border-bottom: 2px solid #ccc;
+    font-size: 1rem;
+    font-family: sans-serif;
+    color: #666;
+    margin-bottom: 15px;
+
+}
+.plan ul li{
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    font-weight: 300;
+    font-family: sans-serif;
+}
+.plan li img{
+    margin-right: 10px;
+    width: 20px;
+}
+.plan ul{
+    margin:40px 0 0 0;
+}
+.plan a{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    background: var(--blue-color);
+    padding: 12px 30px;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: .3s;
+    position: absolute;
+    bottom: 30px;
+    left: 30px;
+    width: calc(100% - 60px);
+}
+.plan a:hover{
+    background: rgb(72, 67, 197);
+}
+
+
+
+
+
+footer {
+    width: 100vw;
+    height: 40vh;
+    padding: 10vh 0;
+    display: flex;
+    flex-direction: column;
+  }
+  footer .footer-table {
+    width: 100vw;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 0 0 0 50px;
+    font-family: sans-serif;
+  }
+  footer .footer-table tr:nth-child(1) {
+    font-weight: 600;
+  }
+  .footer-table td {
+    padding: 0 0px 5px 0;
+    width: 20vw;
+  }
+  .footer-table td a {
+    text-decoration: none;
+    color: #555;
+    font-weight: 300;
+    transition: color 0.3s;
+  }
+  .footer-table td a:hover {
+    color: #000;
+  }
+  footer .footer-form {
+    width: 100vw;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 0 50px;
+    margin-top: 50px;
+  }
+  .footer-form div {
+    margin-bottom: 5px;
+  }
+  .footer-form .email {
+    border: 1px solid #000;
+    padding: 5px;
+    display: flex;
+  }
+  .footer-form .email input {
+    padding: 15px;
+    border: none;
+    outline: none;
+  }
+  .footer-form .email button {
+    padding: 16px;
+    font-weight: 600;
+    border: none;
+    background: var(--blue-color);
+    border-radius: 5px;
+    transition: 0.3s;
+    color: #fff;
+    cursor: pointer;
+  }
+  .footer-form .email button:hover {
+    background: rgb(72, 67, 197);
+  }
+
+}
+
+
+
+
+@media (max-width: 480px){
+    header {
+        height: 100px;
+        width: 100vw;
+        position: absolute;
+        top: 0;
+        left: 0;
+    
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 0;
+      }
+    
+      header .hamburger {
+        transform: translate(36.5vw, -3vh);
+        display: block;
+        position: fixed;
+        z-index: 11;
+        display: flex;
+        justify-content: center;
+        padding: 10px;
+        background: #f2f2f2;
+        border-radius: 10px;
+        transition: transform 0.3s;
+      }
+      header .nav-links {
+        flex-direction: column;
+        width: 100vw;
+        max-height: 0;
+        background: #333;
+        transition: max-height 0.2s ease-out;
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 10;
+      }
+      header .logo {
+        position: absolute;
+        top: 0;
+        left: 0;
+      }
+      header .nav-links a {
+        position: relative;
+        margin-left: 0;
+        color: #000;
+        text-decoration: none;
+        padding: 20px;
+        color: #fff;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+      }
+      header .nav-links a:hover {
+        color: #000;
+        background: #fff;
+      }
+      header #start-scheduling {
+        display: none;
+      }
+    
+      header #nav:checked ~ .nav-links {
+        max-height: 31vh;
+      }
+      header #nav:checked ~ .hamburger {
+        transform: translate(0, 14vh);
+        width: 100vw;
+        border-radius: 0;
+      }
+    
+      header ul {
+        list-style: none;
+        overflow: hidden;
+      }
+      header li a {
+        display: block;
+        padding: 10px;
+      }
+    header input{
+        display: none;
+    }
+
+
+
+
+
+    .title{
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        text-align: center;
+        padding: 20vh 0 0 0;
+    }
+    .title h1{
+        font-size: 3rem;
+        font-family: sans-serif;
+    }
+    .title p{
+        font-family: 'Kanit', sans-serif;
+        color: #777;
+        width: 100%;
+        padding: 0 15px;
+        margin: 15px 0;
+    }
+    
+
+
+    .plans{
+        position: relative;
+        width: 100vw;
+        height: 100%;
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-rows: repeat(1, 1fr);
+        gap: 15px;
+        margin: 10vh 0;
+        padding: 0 30px;
+    }
+    
+    .plans .plan.seven { grid-area: 1}
+    .plans .plan.twelve { grid-area: 2 }
+    .plans .plan.four { grid-area: 3 }
+    
+    .plan{
+        margin: 0 35px;
+        border: 2px solid #ccc;
+        border-radius: 5px;
+        padding: 30px 30px 90px 30px;
+        width: 100%;
+        height: 100%;
+        position: relative;
+        margin: 0 auto;
+    }
+    .plan h1{
+        font-family: 'Kanit', sans-serif;
+        font-size: 2rem;
+    }
+    .plan p{
+        font-weight: 300;
+        padding: 1rem 0;
+        border-bottom: 2px solid #ccc;
+        font-size: 1rem;
+        font-family: sans-serif;
+        color: #666;
+        margin-bottom: 15px;
+    
+    }
+    .plan ul li{
+        margin-bottom: 10px;
+        display: flex;
+        align-items: center;
+        font-weight: 300;
+        font-family: sans-serif;
+    }
+    .plan li img{
+        margin-right: 10px;
+        width: 20px;
+    }
+    .plan ul{
+        margin:40px 0 0 0;
+    }
+    .plan a{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: #fff;
+        background: var(--blue-color);
+        padding: 12px 30px;
+        text-decoration: none;
+        border-radius: 5px;
+        transition: .3s;
+        position: absolute;
+        bottom: 30px;
+        left: 30px;
+        width: calc(100% - 60px);
+    }
+    .plan a:hover{
+        background: rgb(72, 67, 197);
+    }
+    
+    
+
+
+
+    footer {
+        width: 100vw;
+        height: 100%;
+        padding: 10vh 30px;
+        display: flex;
+        flex-direction: column;
+      }
+      footer .footer-table {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        padding: 0;
+        font-family: sans-serif;
+      }
+      footer .footer-table tr:nth-child(1) {
+        font-weight: 600;
+      }
+      .footer-table td {
+        padding: 0 0px 5px 0;
+        width: 150px;
+      }
+      .footer-table td a {
+        text-decoration: none;
+        color: #555;
+        font-weight: 300;
+        transition: color 0.3s;
+      }
+      .footer-table td a:hover {
+        color: #000;
+      }
+      footer .footer-form {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        padding:0px;
+        margin-top: 50px;
+      }
+      .footer-form div {
+        margin-bottom: 5px;
+      }
+      .footer-form .email {
+        border: 1px solid #000;
+        padding: 5px;
+        display: flex;
+        width: 100%;
+      }
+      .footer-form .email input {
+        padding: 15px;
+        border: none;
+        outline: none;
+        width: 100%;
+      }
+      .footer-form .email button {
+        padding: 16px;
+        font-weight: 600;
+        border: none;
+        background: var(--blue-color);
+        border-radius: 5px;
+        transition: 0.3s;
+        color: #fff;
+        cursor: pointer;
+      }
+      .footer-form .email button:hover {
+        background: rgb(72, 67, 197);
+      }
+
+
+}

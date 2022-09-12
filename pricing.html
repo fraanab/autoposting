@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="pricing.css">
+
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@100;200;300&family=Oswald:wght@200;300;400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <title>Document</title>
+</head>
+<body>
+    <header>
+        <img src="./img/Logo.svg" alt="" class="logo">
+        <!-- <div class="nav-links">
+            <a href="./index.html#users">Features</a>
+            <a href="#">Pricing</a>
+        </div>
+        <a href="#" id="start-scheduling">Start Scheduling</a> -->
+        <input type="checkbox" name="" id="nav">
+        <label class="hamburger" for="nav"><img src="./img/Hamburger Menu.svg" alt=""></label>
+        <ul class="nav-links">
+            <li><a href="./index.html#users">Features</a></li>
+            <li><a href="./pricing.html">Pricing</a></li>
+        </ul>
+    </header>
+
+
+
+    <section class="title">
+        <h1>Flexible Plans for Everyone.</h1>
+        <p>Our plans are made for everyone. Whether you're just starting out on social media, or have been on there for a long time, we have a plan that's right for you.</p>
+        <div>
+            <span id="month">Billed Monthly</span>
+            <!-- <input type="checkbox" name="bill" id="check"> -->
+            <label class="toggler-wrapper style-1">
+                <input type="checkbox" checked id="checker">
+                <div class="toggler-slider">
+                  <div class="toggler-knob"></div>
+                </div>
+            </label>
+
+            <span id="year">Billed Yearly</span>
+        </div>
+    </section>
+
+
+
+    <section class="plans">
+        <div class="plan seven">
+            <h1>$4<span style="font-size:16px; color: #aaa;font-weight:300">/mo</span></h1>
+            <p>Perfect plan if you're just starting out.</p>
+            <ul>
+                <li><img src="./img/Checkmark.svg" alt="checkmark">LinkedIn Integration</li>
+                <li><img src="./img/Checkmark.svg" alt="checkmark">Twitter Integration</li>
+            </ul>
+            <a href="#" class="subbutton">Suscribe Now</a>
+        </div>
+        <div class="plan twelve">
+            <h1>$12<span style="font-size:16px; color: #aaa;font-weight:300">/mo</span></h1>
+            <p>Perfect plan if you're a heavy user of social media.</p>
+            <ul>
+                <li><img src="./img/Checkmark.svg" alt="checkmark">LinkedIn Integration</li>
+                <li><img src="./img/Checkmark.svg" alt="checkmark">Twitter Integration</li>
+                <li><img src="./img/Checkmark.svg" alt="checkmark">Instagram Integration</li>
+                <li><img src="./img/Checkmark.svg" alt="checkmark">Real-time Analytics</li>
+            </ul>
+            <a href="#" class="subbutton">Suscribe Now</a>
+        </div>
+        <div class="plan four">
+            <h1>$7<span style="font-size:16px; color: #aaa;font-weight:300">/mo</span></h1>
+            <p>Perfect plan if you're just starting out.</p>
+            <ul>
+                <li><img src="./img/Checkmark.svg" alt="checkmark">LinkedIn Integration</li>
+                <li><img src="./img/Checkmark.svg" alt="checkmark">Twitter Integration</li>
+                <li><img src="./img/Checkmark.svg" alt="checkmark">Real-time Analytics</li>
+            </ul>
+            <a href="#" class="subbutton">Suscribe Now</a>
+        </div>
+    </section>
+
+
+    <footer>
+        <div class="footer-table">
+            <img src="./img/Logo.svg" alt="">
+            <table>
+                <tr>
+                    <td>Product</td>
+                    <td>Help</td>
+                    <td>Company</td>
+                </tr>
+                <tr>
+                    <td><a href="">Homepage</a></td>
+                    <td><a href="">Live Chat</a></td>
+                    <td><a href="">About</a></td>
+                </tr>
+                <tr>
+                    <td><a href="">Pricing</a></td>
+                    <td><a href="">Send Email</a></td>
+                    <td><a href="">Customers</a></td>
+                </tr>
+                <tr>
+                    <td><a href="">Features</a></td>
+                    <td><a href="">FAQ</a></td>
+                    <td><a href="">Blog</a></td>
+                </tr>
+            </table>
+        </div>
+        <div class="footer-form">
+            <div>Try TweetNow</div>
+            <div class="email">
+                <input type="email" placeholder="Email Address"><button>Start Scheduling</button>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // 'Billed' checked:
+        const checkButton = document.getElementById('checker');
+        var chooseMonthly = document.getElementById('month');
+        var chooseYearly = document.getElementById('year');
+
+        checkButton.addEventListener('change', function (e){
+            if(e.currentTarget.checked){
+                chooseMonthly.style.color = '#000';
+                chooseYearly.style.color = '#777'
+            }else{
+                chooseMonthly.style.color = '#777';
+                chooseYearly.style.color = '#000'
+            }
+        })
+    </script>
+</body>
+</html>
